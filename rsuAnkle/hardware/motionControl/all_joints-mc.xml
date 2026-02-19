@@ -9,12 +9,12 @@ BSD-3-Clause license. -->
     <param name="period">2.5e-4</param>
     <param name="pdo_timeout_us">10000</param>
     <param name="enable_dc">false</param>
-    <!-- Joint Names:                               l_ankle_m4  l_ankle_m5   -->
-    <param name="axes_names">                      ("l_ankle_m4", "l_ankle_m5")</param>
+    <!-- Joint Names:                               r_ankle_m4  r_ankle_m5   -->
+    <param name="axes_names">                      ("r_ankle_m4", "r_ankle_m5")</param>
     <param name="inverted_motion_sense_direction"> (        false,          true)</param>
 
-    <param name="pos_limit_min_deg">               (        -10.0,          -10.0 )</param>
-    <param name="pos_limit_max_deg">               (         10.0,           10.0      )</param>
+    <param name="pos_limit_min_deg">               (        -50.0,          -50.0 )</param>
+    <param name="pos_limit_max_deg">               (         40.0,           40.0      )</param>
     <param name="use_position_limits_from_config"> (         true,           true      )</param>
 
     <param name="enc1_mount">                      (      "motor",        "motor")</param>
