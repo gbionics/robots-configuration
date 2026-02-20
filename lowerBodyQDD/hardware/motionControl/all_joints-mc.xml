@@ -17,6 +17,8 @@ BSD-3-Clause license. -->
     <param name="pos_limit_max_deg">               (         23.0,           43.0,        5.0,       78.0,        108.0,        109.0,       109.0,        108.0,      78.0,           5.0,            43.0,          23.0)</param>
     <param name="use_position_limits_from_config"> (         true,           true,       true,       true,        true,         true,         true,        true,       true,            true,           true,         true)</param>
 
+    <!-- 0x2002 position control strategy: true => 1 (Simple PID), false => 2 (Cascaded PID) -->
+    <param name="use_simple_pid_mode">                true                           </param>
     <param name="simple_pid_kp_nm_per_deg">        (        0.6981,        0.6981,     1.7453,     1.7453,     1.7453,        1.7453,       1.7453,         1.7453,     1.7453,      1.7453,           0.6981,        0.6981)</param>
     <param name="simple_pid_kd_nm_s_per_deg">      (        0.0175,        0.0349,     0.1745,     0.1222,     0.1745,        0.1745,       0.1745,         0.1745,      0.1222,     0.1745,           0.0349,        0.0175)</param>
 
