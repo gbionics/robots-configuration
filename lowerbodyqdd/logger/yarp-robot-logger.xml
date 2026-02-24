@@ -10,12 +10,12 @@
   <param name="rgb_cameras_fps">(20)</param>
   <param name="rgb_cameras_rgb_save_mode">("video")</param>
 
-  <param name="rgbd_cameras_fps">()</param>
-  <param name="rgbd_cameras_depth_scale">()</param>
-  <param name="rgbd_cameras_depth_save_mode">()</param>
-  <param name="rgbd_cameras_rgb_save_mode">()</param>
+  <param name="rgbd_cameras_fps">(30)</param>
+  <param name="rgbd_cameras_depth_scale">(1000)</param>
+  <param name="rgbd_cameras_depth_save_mode">("frame")</param>
+  <param name="rgbd_cameras_rgb_save_mode">("video")</param>
 
-  <param name="video_codec_code">mp4v</param>
+  <!-- <param name="video_codec_code">mp4v</param> -->
   <param name="port_prefix">/yarp-robot-logger</param>
   <param name="log_text">true</param>
   <param name="text_logging_subnames">("lowerbodyqdd/yarprobotinterface")</param>
@@ -56,7 +56,7 @@
     <param name="stream_cameras">true</param>
     <group name="Cameras">
       <param name="rgb_cameras_list">("logitech")</param>
-      <param name="rgbd_cameras_list">()</param>
+      <param name="rgbd_cameras_list">("realsense")</param>
     </group>
   </group>
 
@@ -92,6 +92,7 @@
       <elem name="logitech">logitech</elem>
       <elem name="all_joints">all_joints_mc</elem>
       <elem name="waist_imu">waist_imu_client</elem>
+       <elem name="realsense">realsense</elem>
     </paramlist>
   </action>
 
