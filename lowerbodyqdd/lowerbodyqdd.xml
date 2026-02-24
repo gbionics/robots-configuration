@@ -16,5 +16,7 @@
     <xi:include href="hardware/inertials/waist-inertial.xml" disabled_by="disable_imu" />
     <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" disabled_by="disable_imu" />
 
+    <xi:include href="sensors/realsense.xml" />
+
 </devices>
 </robot>

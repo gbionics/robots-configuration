@@ -1,4 +1,4 @@
-set(appname lowerBodyQDD)
+set(appname lowerbodyqdd)
 
 file(GLOB xml ${CMAKE_CURRENT_SOURCE_DIR}/*.xml)
 file(GLOB ini ${CMAKE_CURRENT_SOURCE_DIR}/*.ini)
