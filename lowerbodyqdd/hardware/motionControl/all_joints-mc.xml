@@ -25,8 +25,8 @@ BSD-3-Clause license. -->
 
     <param name="enc1_mount">                      (      "motor",        "motor", "motor",    "motor",     "motor",      "motor",      "motor",     "motor",    "motor", "motor",        "motor",      "motor")</param>
     <param name="enc2_mount">                      (      "joint",        "joint", "joint",    "joint",     "joint",      "joint",      "joint",     "joint",    "joint", "joint",        "joint",      "joint")</param>
-    <param name="position_feedback_motor">         (       "6064",         "6064",  "6064",     "6064",      "6064",       "6064",       "6064",      "6064",     "6064",  "6064",         "6064",       "6064")</param>
-    <param name="velocity_feedback_motor">         (       "606C",         "606C",  "606C",     "606C",      "606C",       "606C",       "606C",      "606C",     "606C",  "606C",         "606C",       "606C")</param>
+    <param name="position_feedback_motor">         (       "enc1",         "enc1",  "enc1",     "enc1",      "enc1",       "enc1",       "enc1",      "enc1",     "enc1",  "enc1",         "enc1",       "enc1")</param>
+    <param name="velocity_feedback_motor">         (       "enc1",         "enc1",  "enc1",     "enc1",      "enc1",       "enc1",       "enc1",      "enc1",     "enc1",  "enc1",         "enc1",       "enc1")</param>
     <param name="position_feedback_joint">         (       "6064",         "6064",  "6064",     "6064",      "6064",       "6064",       "6064",      "6064",     "6064",  "6064",         "6064",       "6064")</param>
     <param name="velocity_feedback_joint">         (       "606C",         "606C",  "606C",     "606C",      "606C",       "606C",       "606C",      "606C",     "606C",  "606C",         "606C",       "606C")</param>
 
