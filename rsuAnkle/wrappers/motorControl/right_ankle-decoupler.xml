@@ -8,8 +8,8 @@ BSD-3-Clause license. -->
     <group name="right">
         <param name="joint_names">("r_ankle_m4", "r_ankle_m5")</param>
         <param name="output_joint_names">("r_ankle_roll", "r_ankle_pitch")</param>
-        <param name="joint_limits_min">(-10.0, -60.0)</param>
-        <param name="joint_limits_max">(10.0, 40.0)</param>
+        <param name="joint_limits_min">(-10.0, -50.0)</param>
+        <param name="joint_limits_max">(10.0, 25.0)</param>
 
         <param name="W_p_M1">(-16.1566, 38.0, -140.0)</param>
         <param name="W_p_M2">(-16.1566, -40.0, -230.0)</param>

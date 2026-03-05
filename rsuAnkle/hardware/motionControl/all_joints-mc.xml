@@ -18,7 +18,7 @@ BSD-3-Clause license. -->
     <param name="simple_pid_kp_nm_per_deg">        (        0.6981,        0.6981      )</param>
     <param name="simple_pid_kd_nm_s_per_deg">      (        0.0117,        0.0117      )</param>
 
-    <param name="pos_limit_min_deg">               (        -50.0,          -50.0 )</param>
+    <param name="pos_limit_min_deg">               (        -40.0,          -40.0 )</param>
     <param name="pos_limit_max_deg">               (         40.0,           40.0      )</param>
     <param name="use_position_limits_from_config"> (         true,           true      )</param>
 
