@@ -5,9 +5,9 @@
 
 <devices>
 
-    <xi:include href="hardware/motionControl/right_all_joints-mc.xml" />
-    <xi:include href="wrappers/motorControl/right_ankle-mc_remapper.xml" />
-    <xi:include href="wrappers/motorControl/right_ankle-mc_wrapper.xml" />
+    <xi:include href="hardware/motionControl/left_all_joints-mc.xml" />
+    <xi:include href="wrappers/motorControl/left_ankle-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/left_ankle-mc_wrapper.xml" />
 
 </devices>
 </robot>

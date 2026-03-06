@@ -2,7 +2,9 @@
 This software may be modified and distributed under the terms of the
 BSD-3-Clause license. -->
 <?xml version="1.0" encoding="UTF-8"?>
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="rsu_ankle-decoupler" type="rsuAnkleDecouplerDevice">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right-rsu_ankle-decoupler" type="rsuAnkleDecouplerDevice">
+    <param name="use_urdf_model">true</param>
+    <param name="urdf_filename">model.urdf</param>
     <param name="decouplers">("right")</param>
 
     <group name="right">
@@ -11,24 +13,19 @@ BSD-3-Clause license. -->
         <param name="joint_limits_min">(-10.0, -50.0)</param>
         <param name="joint_limits_max">(10.0, 25.0)</param>
 
-        <param name="W_p_M1">(-16.1566, 38.0, -140.0)</param>
-        <param name="W_p_M2">(-16.1566, -40.0, -230.0)</param>
-        <param name="r1">298.92003</param>
-        <param name="r2">208.99987</param>
-        <param name="c1_local">(55.6412, 21.4849, -0.0826719)</param>
-        <param name="c2_local">(56.0, -20.502, 0.0)</param>
-        <param name="W_p_F">(-0.230681, -1.0, -437.266)</param>
-        <param name="F_H_F1">(0.999705, 0.0, 0.024278, -53.999982, 0.0, 1.0, 0.0, 52.5118, -0.024278, 0.0, 0.999705, -1.000002, 0.0, 0.0, 0.0, 1.0)</param>
-        <param name="F_H_F2">(0.999705, 0.0, 0.024278, -53.999982, 0.0, 1.0, 0.0, -52.502, -0.024278, 0.0, 0.999705, -1.000002, 0.0, 0.0, 0.0, 1.0)</param>
-        <param name="theta1_offset">0.2496629938214087</param>
-        <param name="theta2_offset">0.3629989066017284</param>
-        <param name="solutionIndex1">-1</param>
-        <param name="solutionIndex2">-1</param>
+        <param name="frame_W">r_shank</param>
+        <param name="frame_M1">r_crank_top</param>
+        <param name="frame_M2">r_crank_bottom</param>
+        <param name="frame_S1">r_gimbal1_yoke</param>
+        <param name="frame_S2">r_gimbal2_yoke</param>
+        <param name="frame_F1">r_anklecr_in</param>
+        <param name="frame_F2">r_anklecr_out</param>
+        <param name="frame_F">r_ankle_2</param>
     </group>
 
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="device"> all_joints-mc  </elem>
+            <elem name="device"> right-all_joints-mc  </elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />

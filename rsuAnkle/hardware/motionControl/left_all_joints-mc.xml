@@ -2,17 +2,17 @@
 This software may be modified and distributed under the terms of the
 BSD-3-Clause license. -->
 <?xml version="1.0" encoding="UTF-8" ?>
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="all_joints-mc" type="CiA402MotionControl">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left-all_joints-mc" type="CiA402MotionControl">
 
     <param name="ifname">"enx08beac20d80f"</param>
     <param name="num_axes">2</param>
     <param name="period">2.5e-4</param>
     <param name="pdo_timeout_us">10000</param>
     <param name="enable_dc">false</param>
-    <!-- Joint Names:                               r_ankle_m4  r_ankle_m5   -->
-    <param name="axes_names">                      ("r_ankle_m4", "r_ankle_m5")</param>
-    <param name="inverted_motion_sense_direction"> (        false,          true)</param>
- 
+    <!-- Joint Names:                               l_ankle_m5  l_ankle_m4   -->
+    <param name="axes_names">                      ("l_ankle_m5", "l_ankle_m4")</param>
+    <param name="inverted_motion_sense_direction"> (        true,          false)</param>
+
     <!-- 0x2002 position control strategy: true => 1 (Simple PID), false => 2 (Cascaded PID) -->
     <param name="use_simple_pid_mode">                true                           </param>
     <param name="simple_pid_kp_nm_per_deg">        (        0.6981,        0.6981      )</param>
