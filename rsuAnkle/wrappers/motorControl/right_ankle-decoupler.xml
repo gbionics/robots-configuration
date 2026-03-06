@@ -8,7 +8,7 @@ BSD-3-Clause license. -->
     <param name="decouplers">("right")</param>
 
     <group name="right">
-        <param name="joint_names">("r_ankle_m4", "r_ankle_m5")</param>
+        <param name="joint_names">("r_motor_1", "r_motor_2")</param>
         <param name="output_joint_names">("r_ankle_roll", "r_ankle_pitch")</param>
         <param name="joint_limits_min">(-10.0, -50.0)</param>
         <param name="joint_limits_max">(10.0, 25.0)</param>

@@ -7,8 +7,8 @@ BSD-3-Clause license. -->
     <param name="urdf_filename">model.urdf</param>
     <param name="decouplers">("left")</param>
 
-    <group name="right">
-        <param name="joint_names">("l_ankle_m4", "l_ankle_m5")</param>
+    <group name="left">
+        <param name="joint_names">("l_motor_1", "l_motor_2")</param>
         <param name="output_joint_names">("l_ankle_roll", "l_ankle_pitch")</param>
         <param name="joint_limits_min">(-10.0, -50.0)</param>
         <param name="joint_limits_max">(10.0, 25.0)</param>

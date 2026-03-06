@@ -10,7 +10,7 @@ BSD-3-Clause license. -->
     <param name="pdo_timeout_us">10000</param>
     <param name="enable_dc">false</param>
     <!-- Joint Names:                               l_ankle_m5  l_ankle_m4   -->
-    <param name="axes_names">                      ("l_ankle_m5", "l_ankle_m4")</param>
+    <param name="axes_names">                      ("l_motor_2", "l_motor_1")</param>
     <param name="inverted_motion_sense_direction"> (        true,          false)</param>
 
     <!-- 0x2002 position control strategy: true => 1 (Simple PID), false => 2 (Cascaded PID) -->
