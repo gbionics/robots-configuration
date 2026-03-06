@@ -36,7 +36,7 @@
 
     <group name="amp">
       <param name="local">"/yarp-robot-logger/exogenous_signals/amp"</param>
-      <param name="remote">"/amp_walking/logger"</param>
+      <param name="remote">"/rl_walking/logger"</param>
       <param name="signal_name">"walking"</param>
       <param name="carrier">"udp"</param>
     </group>
