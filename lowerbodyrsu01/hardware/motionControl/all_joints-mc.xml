@@ -11,7 +11,7 @@ BSD-3-Clause license. -->
     <param name="enable_dc">false</param>
     <!-- Joint Names:                               l_ankle_roll  l_ankle_pitch  l_knee  l_hip_yaw  l_hip_roll  l_hip_pitch  r_hip_pitch  r_hip_roll  r_hip_yaw  r_knee  r_ankle_pitch  r_ankle_roll -->
     <param name="axes_names">                      ("l_motor_2", "l_motor_1", "l_knee", "l_hip_yaw", "l_hip_pitch", "l_hip_roll", "r_hip_roll", "r_hip_pitch",  "r_hip_yaw", "r_knee", "r_motor_1", "r_motor_2")</param>
-    <param name="inverted_motion_sense_direction"> (        true,          false,      false,      true,       true,        false,          true,          false,      false,        true,          false,        true)</param>
+    <param name="inverted_motion_sense_direction"> (        false,        true,      false,      true,       true,        false,          true,          false,      false,        true,          false,        true)</param>
 
     <param name="pos_limit_min_deg">               (         -40.0,          -40.0,     -102.0,      -78.0,     -42.0,        -18.0,        -18.0,       -42.0,      -78.0,          -102.0,          -40.0,          -40.0)</param>
     <param name="pos_limit_max_deg">               (         40.0,           40.0,        5.0,       78.0,        108.0,        109.0,       109.0,        108.0,      78.0,           5.0,            40.0,          40.0)</param>
