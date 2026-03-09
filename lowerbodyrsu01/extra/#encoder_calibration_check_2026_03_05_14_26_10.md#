@@ -1,0 +1,342 @@
+# Encoder Calibration Check Report
+
+| | |
+|:--|:--|
+| **Date** | 2026-03-05 14:26:12 |
+| **Reference TOML** | `joint_calibration_2026_03_04_18_54_35.toml` |
+| **Slaves checked** | 12 |
+
+---
+
+## Summary
+
+| Slave | Name | Enc1 Adj &Delta; (deg) | Enc2 Adj &Delta; (deg) |
+|:-----:|:-----|----------------------:|-----------------------:|
+| 1 | SOMANET | -50.184174 | -6.138268 |
+| 2 | SOMANET | +142.109184 | -25.692558 |
+| 3 | SOMANET | -433.162766 | -8.093834 |
+| 4 | SOMANET | +230.265884 | -14.416809 |
+| 5 | SOMANET | -58.459969 | -6.522102 |
+| 6 | SOMANET | -12.977943 | -1.427193 |
+| 7 | SOMANET | +10.084419 | +1.113396 |
+| 8 | SOMANET | +51.259460 | +5.689888 |
+| 9 | SOMANET | -107.039108 | -11.819572 |
+| 10 | SOMANET | +74.411087 | +8.197517 |
+| 11 | SOMANET | -116.914787 | +28.293228 |
+| 12 | SOMANET | -42.231445 | -5.723534 |
+
+---
+
+### Slave 1 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 370670 | 443747 | +73077 |
+| Raw position (deg) | 254.518890 | 304.696884 | +50.177994 |
+| Adjusted position (counts) | 153624 | 80538 | -73086 |
+| Adjusted position (deg) | 105.485229 | 55.301056 | -50.184174 |
+| Counts per revolution | 524288 | 524288 | 0 |
+| Raw-to-degrees factor | 0.000687 | 0.000687 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 754130 | 772001 | +17871 |
+| Raw position (deg) | 258.909988 | 265.045509 | +6.135521 |
+| Adjusted position (counts) | 294448 | 276569 | -17879 |
+| Adjusted position (deg) | 101.090698 | 94.952431 | -6.138268 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 2 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 583539 | 169614 | -413925 |
+| Raw position (deg) | 200.342216 | 58.232346 | -142.109871 |
+| Adjusted position (counts) | 465040 | 878963 | +413923 |
+| Adjusted position (deg) | 159.658813 | 301.767998 | +142.109184 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 612204 | 687035 | +74831 |
+| Raw position (deg) | 210.183563 | 235.874748 | +25.691185 |
+| Adjusted position (counts) | 436374 | 361539 | -74835 |
+| Adjusted position (deg) | 149.817123 | 124.124565 | -25.692558 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 3 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 150806 | 363907 | +213101 |
+| Raw position (deg) | 51.775131 | 124.937553 | +73.162422 |
+| Adjusted position (counts) | 897771 | -363907 | -1261678 |
+| Adjusted position (deg) | 308.225212 | -124.937553 | -433.162766 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 166322 | 189893 | +23571 |
+| Raw position (deg) | 57.102127 | 65.194588 | +8.092461 |
+| Adjusted position (counts) | 882260 | 858685 | -23575 |
+| Adjusted position (deg) | 302.899933 | 294.806099 | -8.093834 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 4 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 907436 | 236739 | -670697 |
+| Raw position (deg) | 311.543427 | 81.277885 | -230.265541 |
+| Adjusted position (counts) | 141143 | 811841 | +670698 |
+| Adjusted position (deg) | 48.457603 | 278.723488 | +230.265884 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 718281 | 760270 | +41989 |
+| Raw position (deg) | 246.602211 | 261.017990 | +14.415779 |
+| Adjusted position (counts) | 330297 | 288305 | -41992 |
+| Adjusted position (deg) | 113.398476 | 98.981667 | -14.416809 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 5 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 770003 | 940279 | +170276 |
+| Raw position (deg) | 264.359550 | 322.819176 | +58.459625 |
+| Adjusted position (counts) | 278575 | 108298 | -170277 |
+| Adjusted position (deg) | 95.641136 | 37.181168 | -58.459969 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 107854 | 126833 | +18979 |
+| Raw position (deg) | 37.028732 | 43.544655 | +6.515923 |
+| Adjusted position (counts) | 940732 | 921735 | -18997 |
+| Adjusted position (deg) | 322.974701 | 316.452599 | -6.522102 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 6 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 525374 | 563162 | +37788 |
+| Raw position (deg) | 180.372849 | 193.346329 | +12.973480 |
+| Adjusted position (counts) | 523208 | 485407 | -37801 |
+| Adjusted position (deg) | 179.629211 | 166.651268 | -12.977943 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 392558 | 396711 | +4153 |
+| Raw position (deg) | 134.774094 | 136.199913 | +1.425819 |
+| Adjusted position (counts) | 656026 | 651869 | -4157 |
+| Adjusted position (deg) | 225.228653 | 223.801460 | -1.427193 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 7 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 781990 | 752617 | -29373 |
+| Raw position (deg) | 268.474960 | 258.390541 | -10.084419 |
+| Adjusted position (counts) | 266586 | 295959 | +29373 |
+| Adjusted position (deg) | 91.525040 | 101.609459 | +10.084419 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 628737 | 625489 | -3248 |
+| Raw position (deg) | 215.859718 | 214.744606 | -1.115112 |
+| Adjusted position (counts) | 419843 | 423086 | +3243 |
+| Adjusted position (deg) | 144.141655 | 145.255051 | +1.113396 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 8 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 775822 | 626514 | -149308 |
+| Raw position (deg) | 266.357346 | 215.096512 | -51.260834 |
+| Adjusted position (counts) | 272758 | 422062 | +149304 |
+| Adjusted position (deg) | 93.644028 | 144.903488 | +51.259460 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 197902 | 181324 | -16578 |
+| Raw position (deg) | 67.944260 | 62.252655 | -5.691605 |
+| Adjusted position (counts) | 850678 | 867251 | +16573 |
+| Adjusted position (deg) | 292.057114 | 297.747002 | +5.689888 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 9 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 331251 | 643032 | +311781 |
+| Raw position (deg) | 113.726006 | 220.767517 | +107.041512 |
+| Adjusted position (counts) | 717322 | 405548 | -311774 |
+| Adjusted position (deg) | 246.272964 | 139.233856 | -107.039108 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 636334 | 670766 | +34432 |
+| Raw position (deg) | 218.467941 | 230.289230 | +11.821289 |
+| Adjusted position (counts) | 412239 | 377812 | -34427 |
+| Adjusted position (deg) | 141.531029 | 129.711456 | -11.819572 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 10 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 274031 | 57295 | -216736 |
+| Raw position (deg) | 94.081078 | 19.670677 | -74.410400 |
+| Adjusted position (counts) | 774540 | 991278 | +216738 |
+| Adjusted position (deg) | 265.917206 | 340.328293 | +74.411087 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 396127 | 372253 | -23874 |
+| Raw position (deg) | 135.999413 | 127.802925 | -8.196487 |
+| Adjusted position (counts) | 652453 | 676330 | +23877 |
+| Adjusted position (deg) | 224.001961 | 232.199478 | +8.197517 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 11 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 152476 | 493014 | +340538 |
+| Raw position (deg) | 52.348480 | 169.262924 | +116.914444 |
+| Adjusted position (counts) | 896099 | 555560 | -340539 |
+| Adjusted position (deg) | 307.651176 | 190.736389 | -116.914787 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 138135 | 55715 | -82420 |
+| Raw position (deg) | 47.424889 | 19.128227 | -28.296661 |
+| Adjusted position (counts) | 910455 | 992865 | +82410 |
+| Adjusted position (deg) | 312.579918 | 340.873146 | +28.293228 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+### Slave 12 — SOMANET
+
+#### Encoder 1 (0x2111)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 38606 | 100111 | +61505 |
+| Raw position (deg) | 26.508636 | 68.740768 | +42.232132 |
+| Adjusted position (counts) | 485682 | 424178 | -61504 |
+| Adjusted position (deg) | 333.491364 | 291.259918 | -42.231445 |
+| Counts per revolution | 524288 | 524288 | 0 |
+| Raw-to-degrees factor | 0.000687 | 0.000687 | 0.000000 |
+
+#### Encoder 2 (0x2113)
+
+| Metric | Reference (TOML) | Current (Live) | Delta |
+|:-------|-----------------:|---------------:|------:|
+| Raw position (counts) | 767810 | 784471 | +16661 |
+| Raw position (deg) | 263.606644 | 269.326744 | +5.720100 |
+| Adjusted position (counts) | 280769 | 264098 | -16671 |
+| Adjusted position (deg) | 96.394386 | 90.670853 | -5.723534 |
+| Counts per revolution | 1048576 | 1048576 | 0 |
+| Raw-to-degrees factor | 0.000343 | 0.000343 | 0.000000 |
+
+---
+
+*Report generated by `yarp-cia402-check-encoder-calibration`*

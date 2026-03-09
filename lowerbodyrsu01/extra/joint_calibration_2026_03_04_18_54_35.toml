@@ -1,0 +1,227 @@
+[slave_1]
+name = 'SOMANET'
+
+    [slave_1.encoder1]
+    adjusted_position = 153624
+    adjusted_position_degrees = 105.4852294921875
+    counts_per_revolution = 524288
+    raw_position = 370670
+    raw_position_degrees = 254.51889038085938
+    raw_to_degrees_factor = 0.0006866455078125
+
+    [slave_1.encoder2]
+    adjusted_position = 294448
+    adjusted_position_degrees = 101.0906982421875
+    counts_per_revolution = 1048576
+    raw_position = 754130
+    raw_position_degrees = 258.90998840332031
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_10]
+name = 'SOMANET'
+
+    [slave_10.encoder1]
+    adjusted_position = 774540
+    adjusted_position_degrees = 265.91720581054688
+    counts_per_revolution = 1048576
+    raw_position = 274031
+    raw_position_degrees = 94.081077575683594
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_10.encoder2]
+    adjusted_position = 652453
+    adjusted_position_degrees = 224.00196075439453
+    counts_per_revolution = 1048576
+    raw_position = 396127
+    raw_position_degrees = 135.99941253662109
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_11]
+name = 'SOMANET'
+
+    [slave_11.encoder1]
+    adjusted_position = 896099
+    adjusted_position_degrees = 307.65117645263672
+    counts_per_revolution = 1048576
+    raw_position = 152476
+    raw_position_degrees = 52.348480224609375
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_11.encoder2]
+    adjusted_position = 910455
+    adjusted_position_degrees = 312.57991790771484
+    counts_per_revolution = 1048576
+    raw_position = 138135
+    raw_position_degrees = 47.424888610839844
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_12]
+name = 'SOMANET'
+
+    [slave_12.encoder1]
+    adjusted_position = 485682
+    adjusted_position_degrees = 333.49136352539062
+    counts_per_revolution = 524288
+    raw_position = 38606
+    raw_position_degrees = 26.508636474609375
+    raw_to_degrees_factor = 0.0006866455078125
+
+    [slave_12.encoder2]
+    adjusted_position = 280769
+    adjusted_position_degrees = 96.394386291503906
+    counts_per_revolution = 1048576
+    raw_position = 767810
+    raw_position_degrees = 263.60664367675781
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_2]
+name = 'SOMANET'
+
+    [slave_2.encoder1]
+    adjusted_position = 465040
+    adjusted_position_degrees = 159.6588134765625
+    counts_per_revolution = 1048576
+    raw_position = 583539
+    raw_position_degrees = 200.34221649169922
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_2.encoder2]
+    adjusted_position = 436374
+    adjusted_position_degrees = 149.81712341308594
+    counts_per_revolution = 1048576
+    raw_position = 612204
+    raw_position_degrees = 210.18356323242188
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_3]
+name = 'SOMANET'
+
+    [slave_3.encoder1]
+    adjusted_position = 897771
+    adjusted_position_degrees = 308.22521209716797
+    counts_per_revolution = 1048576
+    raw_position = 150806
+    raw_position_degrees = 51.775131225585938
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_3.encoder2]
+    adjusted_position = 882260
+    adjusted_position_degrees = 302.89993286132812
+    counts_per_revolution = 1048576
+    raw_position = 166322
+    raw_position_degrees = 57.102127075195312
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_4]
+name = 'SOMANET'
+
+    [slave_4.encoder1]
+    adjusted_position = 141143
+    adjusted_position_degrees = 48.457603454589844
+    counts_per_revolution = 1048576
+    raw_position = 907436
+    raw_position_degrees = 311.54342651367188
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_4.encoder2]
+    adjusted_position = 330297
+    adjusted_position_degrees = 113.39847564697266
+    counts_per_revolution = 1048576
+    raw_position = 718281
+    raw_position_degrees = 246.60221099853516
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_5]
+name = 'SOMANET'
+
+    [slave_5.encoder1]
+    adjusted_position = 278575
+    adjusted_position_degrees = 95.641136169433594
+    counts_per_revolution = 1048576
+    raw_position = 770003
+    raw_position_degrees = 264.35955047607422
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_5.encoder2]
+    adjusted_position = 940732
+    adjusted_position_degrees = 322.97470092773438
+    counts_per_revolution = 1048576
+    raw_position = 107854
+    raw_position_degrees = 37.028732299804688
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_6]
+name = 'SOMANET'
+
+    [slave_6.encoder1]
+    adjusted_position = 523208
+    adjusted_position_degrees = 179.62921142578125
+    counts_per_revolution = 1048576
+    raw_position = 525374
+    raw_position_degrees = 180.37284851074219
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_6.encoder2]
+    adjusted_position = 656026
+    adjusted_position_degrees = 225.22865295410156
+    counts_per_revolution = 1048576
+    raw_position = 392558
+    raw_position_degrees = 134.77409362792969
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_7]
+name = 'SOMANET'
+
+    [slave_7.encoder1]
+    adjusted_position = 266586
+    adjusted_position_degrees = 91.525039672851562
+    counts_per_revolution = 1048576
+    raw_position = 781990
+    raw_position_degrees = 268.47496032714844
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_7.encoder2]
+    adjusted_position = 419843
+    adjusted_position_degrees = 144.14165496826172
+    counts_per_revolution = 1048576
+    raw_position = 628737
+    raw_position_degrees = 215.85971832275391
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_8]
+name = 'SOMANET'
+
+    [slave_8.encoder1]
+    adjusted_position = 272758
+    adjusted_position_degrees = 93.644027709960938
+    counts_per_revolution = 1048576
+    raw_position = 775822
+    raw_position_degrees = 266.35734558105469
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_8.encoder2]
+    adjusted_position = 850678
+    adjusted_position_degrees = 292.05711364746094
+    counts_per_revolution = 1048576
+    raw_position = 197902
+    raw_position_degrees = 67.944259643554688
+    raw_to_degrees_factor = 0.00034332275390625
+
+[slave_9]
+name = 'SOMANET'
+
+    [slave_9.encoder1]
+    adjusted_position = 717322
+    adjusted_position_degrees = 246.27296447753906
+    counts_per_revolution = 1048576
+    raw_position = 331251
+    raw_position_degrees = 113.72600555419922
+    raw_to_degrees_factor = 0.00034332275390625
+
+    [slave_9.encoder2]
+    adjusted_position = 412239
+    adjusted_position_degrees = 141.53102874755859
+    counts_per_revolution = 1048576
+    raw_position = 636334
+    raw_position_degrees = 218.46794128417969
+    raw_to_degrees_factor = 0.00034332275390625

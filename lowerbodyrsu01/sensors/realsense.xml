@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<devices>
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="realsenseD435" type="realsense2">
+    <group name="SETTINGS">
+      <param extern-name= "depthResolution" name="depthResolution"> (480 270) </param>
+      <param extern-name= "rgbResolution" name="rgbResolution">  (640 480) </param>
+      <param name="framerate">    30  </param>
+      <param extern-name="enableEmitter" name="enableEmitter"> true </param>
+      <param extern-name="needAlignment" name="needAlignment"> false </param>
+      <param name="alignmentFrame"> None </param>
+    </group>
+    <group name="HW_DESCRIPTION">
+      <param name="clipPlanes"> (0.2 10.0) </param>
+    </group>
+    <group name="QUANT_PARAM">
+      <param name="depth_quant"> 2 </param>
+    </group>
+  </device>
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="RGBDWrapperyarp" type="rgbdSensor_nws_yarp">
+    <param name="period"> 0.03 </param>
+    <param extern-name="name" name="name">    /depthCamera </param>
+    <action phase="startup" level="10" type="attach">
+      <paramlist name="networks">
+        <elem name="subdevicergbd"> realsenseD435 </elem>
+      </paramlist>
+    </action>
+    <action phase="shutdown" level="15" type="detach" />
+  </device>
+
+</devices>

@@ -1,0 +1,32 @@
+<!-- Copyright (C) 2025 Istituto Italiano di Tecnologia (IIT). All rights reserved.
+This software may be modified and distributed under the terms of the
+BSD-3-Clause license. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_ankle-decoupler" type="rsuAnkleDecouplerDevice">
+    <param name="use_urdf_model">true</param>
+    <param name="urdf_filename">model.urdf</param>
+    <param name="decouplers">("left")</param>
+
+    <group name="left">
+        <param name="joint_names">("l_motor_1", "l_motor_2")</param>
+        <param name="output_joint_names">("l_ankle_roll", "l_ankle_pitch")</param>
+        <param name="joint_limits_min">(-10.0, -50.0)</param>
+        <param name="joint_limits_max">(10.0, 25.0)</param>
+
+        <param name="frame_W">l_shank</param>
+        <param name="frame_M1">l_crank_top</param>
+        <param name="frame_M2">l_crank_bottom</param>
+        <param name="frame_S1">l_gimbal1_yoke</param>
+        <param name="frame_S2">l_gimbal2_yoke</param>
+        <param name="frame_F1">l_anklecr_in</param>
+        <param name="frame_F2">l_anklecr_out</param>
+        <param name="frame_F">l_ankle_2</param>
+    </group>
+
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <elem name="device"> all_joints-mc </elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="20" type="detach" />
+</device>
