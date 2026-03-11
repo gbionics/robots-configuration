@@ -4,7 +4,7 @@
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-mc_remapper" type="controlboardremapper">
     <param name="axesNames">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
     <param name="joints"> 6 </param>
-    <action phase="startup" level="5" type="attach">
+    <action phase="startup" level="7" type="attach">
         <paramlist name="networks">
             <elem name="all_joints"> right_ankle-decoupler </elem>
         </paramlist>

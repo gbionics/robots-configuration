@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
     <param name="period"> 2.5e-4  </param>
     <param name="name"> /lowerbodyqdd/all_joints </param>
     <action phase="startup" level="10" type="attach">
-        <param name="device"> all_joints-mc </param>
+        <param name="device"> all_joints-mc_remapper </param>
     </action>
     <action phase="shutdown" level="15" type="detach" />
 </device>

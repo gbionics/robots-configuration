@@ -19,7 +19,7 @@ BSD-3-Clause license. -->
 
     <!-- 0x2002 position control strategy: true => 1 (Simple PID), false => 2 (Cascaded PID) -->
     <param name="use_simple_pid_mode">                true                           </param>
-    <param name="simple_pid_kp_nm_per_deg">        (        0.6981,        0.6981,     1.7453,     1.7453,     1.7453,        1.7453,       1.7453,         1.7453,      1.7453,      1.7453,           0.6981,        0.6981)</param>
+    <param name="simple_pid_kp_nm_per_deg">        (        0.34905,       0.34905,     1.7453,     1.7453,     1.7453,        1.7453,       1.7453,         1.7453,      1.7453,      1.7453,           0.34905,       0.34905)</param>
     <param name="simple_pid_kd_nm_s_per_deg">      (        0.0117,        0.0117,     0.1163,     0.0407,     0.1454,        0.1745,       0.1745,         0.1454,      0.0407,      0.1163,           0.0117,        0.0117)</param>
 
 
