@@ -1,0 +1,1069 @@
+<?xml version="1.0"?>
+<robot name="qdd">
+    <link name="root_link">
+        <inertial>
+            <mass value="7.128287758"/>
+            <origin xyz="1.3237129294053877e-4 -2.1297964124999854e-5 0.17137645574282562" rpy="0 -0 0"/>
+            <inertia ixx="0.12243826759206891" ixy="-3.5620707602720126e-5" ixz="0.001300510555094959" iyy="0.0878219930300995" iyz="1.1775097127004015e-5" izz="0.061307877860358496"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_torso.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_torso.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+    <joint name="l_hip_pitch" type="revolute">
+        <origin xyz="-9.999999999982678e-5 0.043100000000000055 -4.590210265315476e-18" rpy="5.379620487911814e-32 -1.608123946446575e-16 -3.345277271567908e-16"/>
+        <axis xyz="-1.3946673876766949e-15 -1 -3.356670065321542e-15"/>
+        <parent link="root_link"/>
+        <child link="l_hip_1"/>
+        <limit lower="-0.767944870877505" upper="1.9198621771937625" effort="1e+9" velocity="1e+9"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <link name="l_hip_1">
+        <inertial>
+            <mass value="5.362536608"/>
+            <origin xyz="-0.04912311754335421 0.038150310690959505 3.2292655935501057e-4" rpy="0 -0 0"/>
+            <inertia ixx="0.011212248306046758" ixy="0.005808331573124222" ixz="-5.450241684127133e-5" iyy="0.0284237268649394" iyz="-8.466410376917206e-5" izz="0.028940963546730935"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_l_hip.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_l_hip.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="r_hip_pitch" type="revolute">
+        <origin xyz="-1e-23 -0.043100000000000055 1e-23" rpy="0 -0 0"/>
+        <axis xyz="-4.579670199482177e-16 -1 -6.664633551722572e-18"/>
+        <parent link="root_link"/>
+        <child link="r_hip_1"/>
+        <limit lower="-0.767944870877505" upper="1.9198621771937625" effort="1e+9" velocity="1e+9"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <link name="r_hip_1">
+        <inertial>
+            <mass value="5.362536608"/>
+            <origin xyz="-0.04931961675168819 -0.03815973247494871 1.9759121055845956e-4" rpy="0 -0 0"/>
+            <inertia ixx="0.011209109658203362" ixy="-0.005816653241187152" ixz="-5.594039024180154e-5" iyy="0.028376010865547748" iyz="4.0744534740074095e-5" izz="0.028896465500490433"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_r_hip.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_r_hip.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="r_hip_roll" type="revolute">
+        <origin xyz="-0.09099999999999993 -0.06299999999999988 -3.035683685444631e-16" rpy="2.2204460492503128e-16 4.4408920985006257e-16 -6.661338147750938e-16"/>
+        <axis xyz="-1 -6.661338147750938e-16 -4.564699783753086e-16"/>
+        <parent link="r_hip_1"/>
+        <child link="r_hip_2"/>
+        <limit lower="-0.3490658503988659" upper="1.9373154697137058" effort="1e+9" velocity="1e+9"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <link name="r_hip_2">
+        <inertial>
+            <mass value="0.991982097"/>
+            <origin xyz="0.08244556699822385 -0.005434263467105044 -0.058179577300780265" rpy="0 -0 0"/>
+            <inertia ixx="0.002415691877006674" ixy="7.629507985653088e-5" ixz="4.971490456899532e-4" iyy="0.005209437617931077" iyz="7.874070421644866e-5" izz="0.004037490233789776"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_r_hip_adduction.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_r_hip_adduction.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="r_hip_yaw" type="revolute">
+        <origin xyz="0.08040000000000003 -1.3877787807814457e-17 -0.12600000000000003" rpy="4.519885681153209e-19 4.5323352329537515e-19 0.008726646259971818"/>
+        <axis xyz="1.167609457108869e-16 -1.4669905954220769e-18 -1.0000000000000002"/>
+        <parent link="r_hip_2"/>
+        <child link="r_upper_leg"/>
+        <limit lower="-1.413716694115407" upper="1.413716694115407" effort="1e+9" velocity="1e+9"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <link name="r_upper_leg">
+        <inertial>
+            <mass value="4.954642652"/>
+            <origin xyz="0.0051519601343933295 -0.013615474816105505 -0.14068291386564685" rpy="0 -0 0"/>
+            <inertia ixx="0.05339150210727005" ixy="3.117266204077314e-4" ixz="0.0023473815596527117" iyy="0.05334669648207331" iyz="-0.005641239940539352" izz="0.009798877697697361"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_r_upperleg.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_r_upperleg.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="r_knee" type="revolute">
+        <origin xyz="0.010500000000000004 0 -0.22510000000000002" rpy="2.9274135154685974e-32 -0 0"/>
+        <axis xyz="4.8147427088335825e-17 -1.0000000000000002 -2.9274135154685985e-32"/>
+        <parent link="r_upper_leg"/>
+        <child link="r_shank"/>
+        <limit lower="-1.8325957145940461" upper="0.12217304763960307" effort="1e+9" velocity="1e+9"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+
+    <link name="r_shank">
+        <inertial>
+            <mass value="3.3683466"/>
+            <origin xyz="-0.013280717 -0.007491159 -0.162642640" rpy="0 0 0"/>
+            <inertia ixx="0.055201402" ixy="0.0001664547" ixz="-0.0016690245" iyy="0.053513522" iyz="0.0017124174" izz="0.006133685"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_lower_leg.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_lower_leg.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="r_ankle_1">
+        <inertial>
+            <mass value="0.15997050"/>
+            <origin xyz="-0.0016697750 0.0003976530 -0.0002152584" rpy="0 0 0"/>
+            <inertia ixx="0.000051925049" ixy="-0.00000010618025" ixz="0.0000050125466" iyy="0.000050689034" iyz="-0.000000013668956" izz="0.000048147435"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_ankle_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_ankle_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="r_ankle_2">
+        <inertial>
+            <mass value="0.41549220"/>
+            <origin xyz="-0.0010747325 0 -0.0014715168" rpy="0 0 0"/>
+            <inertia ixx="0.00033608170" ixy="0" ixz="0.000041580663" iyy="0.00064432313" iyz="0" izz="0.00072343772"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_ankle_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_ankle_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="r_ankle_pitch" type="revolute">
+        <parent link="r_shank"/>
+        <child link="r_ankle_1"/>
+        <origin xyz="-0.000100004 -0.001000000 -0.437266" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="100" velocity="5.0" lower="-0.6894" upper="1.2217"/>
+        <dynamics damping="0.1" friction="0.1"/>
+    </joint>
+
+    <joint name="r_ankle_roll" type="revolute">
+        <parent link="r_ankle_1"/>
+        <child link="r_ankle_2"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100" velocity="5.0" lower="-0.4189" upper="0.4189"/>
+        <dynamics damping="0.1" friction="0.1"/>
+    </joint>
+
+    <link name="r_crank_top">
+        <inertial>
+            <mass value="0.11827852"/>
+            <origin xyz="0.021237753 0.0071287231 0" rpy="0 0 0"/>
+            <inertia ixx="0.000020700736" ixy="-0.000011013035" ixz="0" iyy="0.00010829720" iyz="0" izz="0.000095793341"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_crank_top.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_crank_top.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="r_crank_bottom">
+        <inertial>
+            <mass value="0.11827852"/>
+            <origin xyz="0.021237753 -0.0071287231 0" rpy="0 0 0"/>
+            <inertia ixx="0.000020700736" ixy="0.000011013035" ixz="0" iyy="0.00010829720" iyz="0" izz="0.000095793341"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_crank_bottom.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_crank_bottom.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="r_motor_1" type="revolute">
+        <parent link="r_shank"/>
+        <child link="r_crank_top"/>
+        <origin xyz="-0.01615655 0.038 -0.14" rpy="0 0.251170638079497 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="100" velocity="10.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.1" friction="0.1"/>
+    </joint>
+
+    <joint name="r_motor_2" type="revolute">
+        <parent link="r_shank"/>
+        <child link="r_crank_bottom"/>
+        <origin xyz="-0.01615655 -0.04 -0.23" rpy="0 0.363366777683564 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="100" velocity="10.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.1" friction="0.1"/>
+    </joint>
+
+    <link name="r_rod_in">
+        <inertial>
+            <mass value="0.16858219"/>
+            <origin xyz="-0.0091518489 -0.0054929292 -0.14913189" rpy="0 0 0"/>
+            <inertia ixx="0.0025692142" ixy="-0.0000041015841" ixz="-0.00015966628" iyy="0.0025821836" iyz="-0.00006010109" izz="0.000021162428"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_conrod_in.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_conrod_in.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="r_rod_out">
+        <inertial>
+            <mass value="0.15874272"/>
+            <origin xyz="-0.0087297730 0.0046268795 -0.10415576" rpy="0 0 0"/>
+            <inertia ixx="0.0011060631" ixy="0.0000031028631" ixz="-0.00009181203" iyy="0.0011170237" iyz="0.000036994368" izz="0.000018159217"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_conrod_out.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_conrod_out.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="r_gimbal1_yoke">
+        <inertial>
+            <mass value="0.000001"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-9" ixy="0" ixz="0" iyy="1e-9" iyz="0" izz="1e-9"/>
+        </inertial>
+    </link>
+
+    <joint name="r_gimbal1_pitch" type="revolute">
+        <parent link="r_crank_top"/>
+        <child link="r_gimbal1_yoke"/>
+        <origin xyz="0.0556412 0.021484908 -0.000082672" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="50" velocity="20.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.01" friction="0.01"/>
+    </joint>
+
+    <joint name="r_gimbal1_roll" type="revolute">
+        <parent link="r_gimbal1_yoke"/>
+        <child link="r_rod_in"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="50" velocity="20.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.01" friction="0.01"/>
+    </joint>
+
+    <link name="r_gimbal2_yoke">
+        <inertial>
+            <mass value="0.000001"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-9" ixy="0" ixz="0" iyy="1e-9" iyz="0" izz="1e-9"/>
+        </inertial>
+    </link>
+
+    <joint name="r_gimbal2_pitch" type="revolute">
+        <parent link="r_crank_bottom"/>
+        <child link="r_gimbal2_yoke"/>
+        <origin xyz="0.056 -0.020501965 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="50" velocity="20.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.01" friction="0.01"/>
+    </joint>
+
+    <joint name="r_gimbal2_roll" type="revolute">
+        <parent link="r_gimbal2_yoke"/>
+        <child link="r_rod_out"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="50" velocity="20.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.01" friction="0.01"/>
+    </joint>
+
+    <link name="r_anklecr_in"/>
+    <joint name="r_anklecr_in_fixed" type="fixed">
+        <parent link="r_ankle_2"/>
+        <child link="r_anklecr_in"/>
+        <origin xyz="-0.054 0.052511778 -0.001" rpy="0 0.024280391598205 0"/>
+    </joint>
+
+    <link name="r_anklecr_out"/>
+    <joint name="r_anklecr_out_fixed" type="fixed">
+        <parent link="r_ankle_2"/>
+        <child link="r_anklecr_out"/>
+        <origin xyz="-0.054 -0.052501965 -0.001" rpy="0 0.024280391598205 0"/>
+    </joint>
+
+    <link name="r_rod_in_bottom"/>
+    <joint name="r_rod_in_bottom_fixed" type="fixed">
+        <parent link="r_rod_in"/>
+        <child link="r_rod_in_bottom"/>
+        <origin xyz="-0.018263773 -0.007973131 -0.298254558" rpy="0 -0.2268896163212 0"/>
+    </joint>
+
+    <link name="r_rod_out_bottom"/>
+    <joint name="r_rod_out_bottom_fixed" type="fixed">
+        <parent link="r_rod_out"/>
+        <child link="r_rod_out_bottom"/>
+        <origin xyz="-0.017443424 0.007 -0.208153133" rpy="0 -0.339086709774071 0"/>
+    </joint>
+
+    <link name="r_foot">
+        <inertial>
+            <mass value="0.47577562"/>
+            <origin xyz="-0.0020786844 0.0010710155 -0.0084564403" rpy="0 0 0"/>
+            <inertia ixx="2.3338993e-4" ixy="-1.2703699e-7" ixz="-8.0134115e-5" iyy="2.1455663e-3" iyz="-1.4365352e-8" izz="2.2713410e-3"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_foot.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_r_foot.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="r_foot_fixed_joint" type="fixed">
+        <origin xyz="0.000100004 0 -0.0645" rpy="0 0 0"/>
+        <parent link="r_ankle_2"/>
+        <child link="r_foot"/>
+    </joint>
+
+    <link name="r_sole"/>
+    <joint name="r_sole_fixed_joint" type="fixed">
+        <origin xyz="0 0 -0.015" rpy="0 0 0"/>
+        <parent link="r_foot"/>
+        <child link="r_sole"/>
+    </joint>
+
+    <joint name="l_hip_roll" type="revolute">
+        <origin xyz="-0.09090000000000016 0.06299999999999992 2.4035495685723547e-17" rpy="-2.1407390641711643e-46 -2.2204460492502482e-16 3.3452772715678945e-16"/>
+        <axis xyz="1 1.3312027775604574e-30 4.99600361081327e-16"/>
+        <parent link="l_hip_1"/>
+        <child link="l_hip_2"/>
+        <limit lower="-0.3490658503988659" upper="1.9373154697137058" effort="1e+9" velocity="1e+9"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <link name="l_hip_2">
+        <inertial>
+            <mass value="0.991982097"/>
+            <origin xyz="0.08207861485150715 0.005274632906156401 -0.057900966261410766" rpy="0 -0 0"/>
+            <inertia ixx="0.002423687890810985" ixy="-7.612780973221888e-5" ixz="5.164936326585001e-4" iyy="0.0052448003777984704" iyz="-7.530318626038118e-5" izz="0.004049275104363554"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_l_hip_adduction.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_l_hip_adduction.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="l_hip_yaw" type="revolute">
+        <origin xyz="0.08039999999999994 0 -0.126" rpy="0 3.828569995696823e-16 1.3312027775604572e-30"/>
+        <axis xyz="6.040079112082323e-16 7.894919286223316e-16 1"/>
+        <parent link="l_hip_2"/>
+        <child link="l_upper_leg"/>
+        <limit lower="-1.413716694115407" upper="1.413716694115407" effort="1e+9" velocity="1e+9"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <link name="l_upper_leg">
+        <inertial>
+            <mass value="4.954642652"/>
+            <origin xyz="0.005202975314993098 0.01368289413933109 -0.1401857970282267" rpy="0 -0 0"/>
+            <inertia ixx="0.053782295128338264" ixy="-3.617487925814581e-4" ixz="0.0024215964903033854" iyy="0.053766044871770585" iyz="0.005641673983584712" izz="0.00980918692673873"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_l_upperleg.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_l_upperleg.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="l_knee" type="revolute">
+        <origin xyz="0.010499999999999916 5.551115123125783e-17 -0.22509999999999972" rpy="0 -0 0"/>
+        <axis xyz="-3.2722362831057244e-16 -1 -0"/>
+        <parent link="l_upper_leg"/>
+        <child link="l_shank"/>
+        <limit lower="-1.8325957145940461" upper="0.12217304763960307" effort="1e+9" velocity="1e+9"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+
+    <link name="l_shank">
+        <inertial>
+            <mass value="3.3683466"/>
+            <origin xyz="-0.013280717 0.007491159 -0.162642640" rpy="0 0 0"/>
+            <inertia ixx="0.055201402" ixy="-0.0001664547" ixz="-0.0016690245" iyy="0.053513522" iyz="-0.0017124174" izz="0.006133685"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_lower_leg.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_lower_leg.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="l_ankle_1">
+        <inertial>
+            <mass value="0.15997050"/>
+            <origin xyz="-0.0016697750 0.0003976530 -0.0002152584" rpy="0 0 0"/>
+            <inertia ixx="0.000051925049" ixy="0.00000010618025" ixz="0.0000050125466" iyy="0.000050689034" iyz="0.000000013668956" izz="0.000048147435"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_ankle_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_ankle_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="l_ankle_2">
+        <inertial>
+            <mass value="0.41549220"/>
+            <origin xyz="-0.0010747325 0 -0.0014715168" rpy="0 0 0"/>
+            <inertia ixx="0.00033608170" ixy="0" ixz="0.000041580663" iyy="0.00064432313" iyz="0" izz="0.00072343772"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_ankle_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_ankle_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="l_ankle_pitch" type="revolute">
+        <parent link="l_shank"/>
+        <child link="l_ankle_1"/>
+        <origin xyz="-0.000100004 -0.001000000 -0.437266" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="100" velocity="5.0" lower="-0.6894" upper="1.2217"/>
+        <dynamics damping="0.1" friction="0.1"/>
+    </joint>
+
+    <joint name="l_ankle_roll" type="revolute">
+        <parent link="l_ankle_1"/>
+        <child link="l_ankle_2"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100" velocity="5.0" lower="-0.4189" upper="0.4189"/>
+        <dynamics damping="0.1" friction="0.1"/>
+    </joint>
+
+    <link name="l_crank_top">
+        <inertial>
+            <mass value="0.11827852"/>
+            <origin xyz="0.021237753 0.0071287231 0" rpy="0 0 0"/>
+            <inertia ixx="0.000020700736" ixy="0.000011013035" ixz="0" iyy="0.00010829720" iyz="0" izz="0.000095793341"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_crank_top.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_crank_top.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="l_crank_bottom">
+        <inertial>
+            <mass value="0.11827852"/>
+            <origin xyz="0.021237753 0.0071287231 0" rpy="0 0 0"/>
+            <inertia ixx="0.000020700736" ixy="-0.000011013035" ixz="0" iyy="0.00010829720" iyz="0" izz="0.000095793341"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_crank_bottom.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_crank_bottom.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <joint name="l_motor_1" type="revolute">
+        <parent link="l_shank"/>
+        <child link="l_crank_top"/>
+        <origin xyz="-0.01615655 -0.038 -0.14" rpy="0 0.251170638079497 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="100" velocity="10.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.1" friction="0.1"/>
+    </joint>
+
+    <joint name="l_motor_2" type="revolute">
+        <parent link="l_shank"/>
+        <child link="l_crank_bottom"/>
+        <origin xyz="-0.01615655 0.04 -0.23" rpy="0 0.363366777683564 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="100" velocity="10.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.1" friction="0.1"/>
+    </joint>
+
+    <link name="l_rod_in">
+        <inertial>
+            <mass value="0.16858219"/>
+            <origin xyz="-0.0091518489 0.0054929292 -0.14913189" rpy="0 0 0"/>
+            <inertia ixx="0.0025692142" ixy="0.0000041015841" ixz="-0.00015966628" iyy="0.0025821836" iyz="0.00006010109" izz="0.000021162428"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_conrod_in.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_conrod_in.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="l_rod_out">
+        <inertial>
+            <mass value="0.15874272"/>
+            <origin xyz="-0.0087297730 -0.0046268795 -0.10415576" rpy="0 0 0"/>
+            <inertia ixx="0.0011060631" ixy="-0.0000031028631" ixz="-0.00009181203" iyy="0.0011170237" iyz="-0.000036994368" izz="0.000018159217"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_conrod_out.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_conrod_out.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </collision>
+    </link>
+
+    <link name="l_gimbal1_yoke">
+        <inertial>
+            <mass value="0.000001"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-9" ixy="0" ixz="0" iyy="1e-9" iyz="0" izz="1e-9"/>
+        </inertial>
+    </link>
+
+    <joint name="l_gimbal1_pitch" type="revolute">
+        <parent link="l_crank_top"/>
+        <child link="l_gimbal1_yoke"/>
+        <origin xyz="0.0556412 -0.021484908 -0.000082672" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="50" velocity="20.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.01" friction="0.01"/>
+    </joint>
+
+    <joint name="l_gimbal1_roll" type="revolute">
+        <parent link="l_gimbal1_yoke"/>
+        <child link="l_rod_in"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="50" velocity="20.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.01" friction="0.01"/>
+    </joint>
+
+    <link name="l_gimbal2_yoke">
+        <inertial>
+            <mass value="0.000001"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-9" ixy="0" ixz="0" iyy="1e-9" iyz="0" izz="1e-9"/>
+        </inertial>
+    </link>
+
+    <joint name="l_gimbal2_pitch" type="revolute">
+        <parent link="l_crank_bottom"/>
+        <child link="l_gimbal2_yoke"/>
+        <origin xyz="0.056 0.020501965 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="50" velocity="20.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.01" friction="0.01"/>
+    </joint>
+
+    <joint name="l_gimbal2_roll" type="revolute">
+        <parent link="l_gimbal2_yoke"/>
+        <child link="l_rod_out"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="50" velocity="20.0" lower="-3.14159" upper="3.14159"/>
+        <dynamics damping="0.01" friction="0.01"/>
+    </joint>
+
+    <link name="l_anklecr_in"/>
+    <joint name="l_anklecr_in_fixed" type="fixed">
+        <parent link="l_ankle_2"/>
+        <child link="l_anklecr_in"/>
+        <origin xyz="-0.054 -0.052511778 -0.001" rpy="0 0.024280391598205 0"/>
+    </joint>
+
+    <link name="l_anklecr_out"/>
+    <joint name="l_anklecr_out_fixed" type="fixed">
+        <parent link="l_ankle_2"/>
+        <child link="l_anklecr_out"/>
+        <origin xyz="-0.054 0.052501965 -0.001" rpy="0 0.024280391598205 0"/>
+    </joint>
+
+    <link name="l_rod_in_bottom"/>
+    <joint name="l_rod_in_bottom_fixed" type="fixed">
+        <parent link="l_rod_in"/>
+        <child link="l_rod_in_bottom"/>
+        <origin xyz="-0.018263773 0.007973131 -0.298254558" rpy="0 -0.2268896163212 0"/>
+    </joint>
+
+    <link name="l_rod_out_bottom"/>
+    <joint name="l_rod_out_bottom_fixed" type="fixed">
+        <parent link="l_rod_out"/>
+        <child link="l_rod_out_bottom"/>
+        <origin xyz="-0.017443424 -0.007 -0.208153133" rpy="0 -0.339086709774071 0"/>
+    </joint>
+
+    <link name="l_foot">
+        <inertial>
+            <mass value="0.47577562"/>
+            <origin xyz="-0.0020786844 0.0010710155 -0.0084564403" rpy="0 0 0"/>
+            <inertia ixx="2.3338993e-4" ixy="-1.2703699e-7" ixz="-8.0134115e-5" iyy="2.1455663e-3" iyz="-1.4365352e-8" izz="2.2713410e-3"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_foot.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lowerbody/meshes/simmechanics/sim_qdd_rsu_l_foot.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="l_foot_fixed_joint" type="fixed">
+        <origin xyz="0.000100004 0 -0.0645" rpy="0 0 0"/>
+        <parent link="l_ankle_2"/>
+        <child link="l_foot"/>
+    </joint>
+
+    <link name="l_sole"/>
+    <joint name="l_sole_fixed_joint" type="fixed">
+        <origin xyz="0 0 -0.015" rpy="0 0 0"/>
+        <parent link="l_foot"/>
+        <child link="l_sole"/>
+    </joint>
+
+    <link name="waist_imu_0"/>
+    <joint name="waist_imu_0_fixed_joint" type="fixed">
+        <origin xyz="0.0471 0.0076999515154014585 0.08609428492897564" rpy="-1.5707963109495677 -1.5706911187937582 1.5707963109489231"/>
+        <parent link="root_link"/>
+        <child link="waist_imu_0"/>
+    </joint>
+
+    <link name="real_sense_depth"/>
+    <joint name="real_sense_depth_camera" type="fixed">
+        <origin xyz="0.152763772 0.0175 0.133994889" rpy="-2.443461 0 -1.570796"/>
+        <parent link="root_link"/>
+        <child link="real_sense_depth"/>
+    </joint>
+    <link name="real_sense_rgb"/>
+    <joint name="real_sense_rgb_camera" type="fixed">
+        <origin xyz="0.152763772 -0.0115 0.133994889" rpy="-2.443461 0 -1.570796"/>
+        <parent link="root_link"/>
+        <child link="real_sense_rgb"/>
+    </joint>
+
+    <link name="weight1"/>
+    <joint name="weight1_fixed_joint" type="fixed">
+        <origin xyz="0 -0.132 0.2749999999999999" rpy="-4.440892098500626e-16 -0 -2.1936342066570616e-30"/>
+        <parent link="root_link"/>
+        <child link="weight1"/>
+    </joint>
+    <link name="weight2"/>
+    <joint name="weight2_fixed_joint" type="fixed">
+        <origin xyz="8.335809985296834e-32 -0.094 0.2749999999999999" rpy="-4.440892098500626e-16 -0 -2.1936342066570616e-30"/>
+        <parent link="root_link"/>
+        <child link="weight2"/>
+    </joint>
+    <link name="weight3"/>
+    <joint name="weight3_fixed_joint" type="fixed">
+        <origin xyz="4.957613307044959e-31 0.094 0.27499999999999986" rpy="-4.440892098500626e-16 -0 -2.1936342066570616e-30"/>
+        <parent link="root_link"/>
+        <child link="weight3"/>
+    </joint>
+    <link name="weight4"/>
+    <joint name="weight4_fixed_joint" type="fixed">
+        <origin xyz="5.791194305574643e-31 0.132 0.27499999999999986" rpy="-4.440892098500626e-16 -0 -2.1936342066570616e-30"/>
+        <parent link="root_link"/>
+        <child link="weight4"/>
+    </joint>
+    <link name="imu_frame"/>
+    <joint name="imu_frame_fixed_joint" type="fixed">
+        <origin xyz="0.07459999999977064 0.0076999515154014585 0.08609428492897564" rpy="-1.5707963109495677 -1.5706911187937582 1.5707963109489231"/>
+        <parent link="root_link"/>
+        <child link="imu_frame"/>
+    </joint>
+
+    <link name="base_link"/>
+    <joint name="base_link_fixed_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
+        <axis xyz="0 0 0"/>
+        <parent link="root_link"/>
+        <child link="base_link"/>
+    </joint>
+
+    <gazebo reference="root_link">
+        <sensor name="waist_imu_0" type="imu">
+            <always_on>1</always_on>
+            <update_rate>100.000000</update_rate>
+            <pose>0.0746 0.00769995 0.0860943 -1.5708 -1.57069 1.5708 </pose>
+            <plugin name="qdd_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
+                <yarpConfigurationFile>model://qdd/conf/gazebo_qdd_inertial.ini</yarpConfigurationFile>
+            </plugin>
+        </sensor>
+    </gazebo>
+    <sensor name="waist_imu_0" type="accelerometer">
+        <parent link="root_link"/>
+        <origin rpy="-1.5708 -1.57069 1.5708 " xyz="0.0746 0.00769995 0.0860943"/>
+    </sensor>
+
+    <gazebo>
+        <plugin name="gzyarp::Imu" filename="gz-sim-yarp-imu-system">
+            <yarpConfigurationFile>model://qdd/conf/gazebo_qdd_inertial.ini</yarpConfigurationFile>
+        </plugin>
+    </gazebo>
+    <gazebo>
+        <plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
+            <yarpConfigurationFile>model://qdd/conf/gazebo_qdd_left_leg.ini</yarpConfigurationFile>
+        </plugin>
+    </gazebo>
+    <gazebo>
+        <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+            <yarpConfigurationFile>model://qdd/conf/gazebo_qdd_left_leg.ini</yarpConfigurationFile>
+        </plugin>
+    </gazebo>
+    <gazebo>
+        <plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
+            <yarpConfigurationFile>model://qdd/conf/gazebo_qdd_right_leg.ini</yarpConfigurationFile>
+        </plugin>
+    </gazebo>
+    <gazebo>
+        <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+            <yarpConfigurationFile>model://qdd/conf/gazebo_qdd_right_leg.ini</yarpConfigurationFile>
+        </plugin>
+    </gazebo>
+    <gazebo>
+        <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
+            <yarpRobotInterfaceConfigurationFile>model://qdd/conf/qdd.xml</yarpRobotInterfaceConfigurationFile>
+        </plugin>
+    </gazebo>
+    <gazebo>
+        <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
+            <yarpRobotInterfaceConfigurationFile>model://qdd/conf/qdd.xml</yarpRobotInterfaceConfigurationFile>
+        </plugin>
+    </gazebo>
+    <gazebo>
+        <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
+    </gazebo>
+    <gazebo>
+        <pose>0.000000 0.000000 0.800000 0.000000 0.000000 0.000000</pose>
+    </gazebo>
+
+    <loop name="l_ankle_rod_out_loop">
+        <predecessor name="l_rod_out_bottom">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </predecessor>
+        <successor name="l_anklecr_out">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </successor>
+    </loop>
+
+    <loop name="r_ankle_rod_out_loop">
+        <predecessor name="r_rod_out_bottom">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </predecessor>
+        <successor name="r_anklecr_out">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </successor>
+    </loop>
+
+    <loop name="l_ankle_rod_in_loop">
+        <predecessor name="l_rod_in_bottom">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </predecessor>
+        <successor name="l_anklecr_in">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </successor>
+    </loop>
+
+    <loop name="r_ankle_rod_in_loop">
+        <predecessor name="r_rod_in_bottom">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </predecessor>
+        <successor name="r_anklecr_in">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </successor>
+    </loop>
+</robot>
