@@ -1,0 +1,16 @@
+<application>
+    <name>GB-walking</name>
+    <module>
+        <workdir>/usr/local/src/robot/robotology-superbuild/src/walking-controllers/src/WalkingModule/app/robots/ergoCubSN002</workdir>
+        <name>WalkingModule</name>
+        <parameters>--from dcm_walking_autonomous.ini --RETARGETING::data_arrived_timeout 1000</parameters>
+        <node>ergocub-torso</node>
+    </module>
+
+    <connection>
+        <output>/xbg/joints</output>
+        <input>/walking-coordinator/humanState:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+
+</application>

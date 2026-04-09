@@ -1,0 +1,26 @@
+<application>
+
+    <name>00-GB-teleoperation</name>
+    <description>Application to run module related to teleoperation.</description>
+    <version>1.0</version>
+    <authors>
+        <author email="arianna.pietrasanta@gbionics.ai">Arianna Pietrasanta</author>
+    </authors>
+
+
+    <application>
+        <name>GB-teleoperation</name>
+    </application>
+
+    <application>
+        <name>GB-teleoperation-luxonis</name>
+    </application>
+
+    <application>
+        <name>GB-teleoperation-IK</name>
+    </application>
+
+    <application>
+        <name>GB-walking</name>
+    </application>
+</application>  

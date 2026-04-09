@@ -1,0 +1,17 @@
+<application>
+
+    <name>00-GB-autonomy</name>
+    <description>Application to run module related to autonomous behaviour.</description>
+    <version>1.0</version>
+    <authors>
+        <author email="arianna.pietrasanta@gbionics.ai">Arianna Pietrasanta</author>
+    </authors>
+
+    <application>
+        <name>GB-autonomy-luxonis</name>#
+    </application>
+
+    <application>
+        <name>GB-walking</name>
+    </application>
+</application>  

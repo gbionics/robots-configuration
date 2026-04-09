@@ -12,37 +12,28 @@
         <node>ergocub-head</node>
     </module>
     <module>
+	<workdir>/usr/local/src/robot/robotology-superbuild/src/walking-controllers/src/WalkingModule/app/robots/ergoCubSN002</workdir>
         <name>WalkingModule</name>
         <parameters>--from dcm_walking_autonomous.ini</parameters>
         <node>ergocub-torso</node>
     </module>
     <module>
-        <name>python</name>
-        <parameters>element_llm-task-planner/scripts/talkingllm/allyGUI.py </parameters>
-        <node>teleop</node>
+        <name>conda</name>
+        <parameters>run -n ffmpeg_env --no-capture-output ffmpeg -f pulse -i default -ac 1 -acodec libopus -f rtp rtp://10.0.2.43:5000 -sdp_file audio_ffmpeg_robot.sdp</parameters>
+        <node>ergocub-torso</node>
     </module>
     <module>
-        <name>conda</name>
-        <parameters>run -n ffmpeg_env --no-capture-output ffmpeg -f pulse -i default -ac 1 -acodec libopus -f rtp rtp://10.0.2.25:5000 -sdp_file audio_ffmpeg_robot.sdp</parameters>
-        <node>ergocub-torso</node>
-   </module>
-    <module>
-        <name>yarpdev</name>
-        <parameters>--device deviceBundler --wrapper_device AudioRecorderWrapper --attached_device portaudioRecorder --name /ergocub/microphone --min_samples_over_network 150 --max_samples_over_network 1000 --AUDIO_BASE::rate 16000 --AUDIO_BASE::samples 4000 --AUDIO_BASE::channels 1 --start</parameters>
-        <node>ergocub-torso</node>
-   </module>
-   <module>
         <name>ffplay</name>
         <parameters>-nodisp -fflags nobuffer -flags low_delay -i udp://0.0.0.0:1234?listen</parameters>
-    <node>ergocub-head</node>
-   </module>
+        <node>ergocub-head</node>
+    </module>
     <module>
-        <workdir>D:\element_llm-task-planner\scripts\talkingllm\config\transform_client</workdir>
+        <workdir>C:\Users\GB_admin\Desktop\ergoCub\element_llm-task-planner\scripts\talkingllm\config\transform_client</workdir>
         <name>yarprobotinterface</name>
         <parameters>--config iframetransform_to_iwear_walking.xml</parameters>
         <node>teleop</node>
-   </module>
-   <module>
+    </module>
+    <module>
         <name>llmGUI</name>
         <parameters>wake_word=ergocub2 llm=gemini action_handler=xbgda+ audio_source=ffmpeg</parameters>
         <node>teleop</node>

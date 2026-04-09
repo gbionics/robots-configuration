@@ -1,0 +1,9 @@
+<application>
+    <name>GB-autonomy-luxonis</name>
+    <module>
+        <workdir>/usr/local/src/robot/ami/team-phoenix/luxonis/</workdir>
+        <name>bash</name>
+        <parameters>run_luxonis.sh config_matrix-autonomy.toml</parameters>
+        <node>localhost</node>
+    </module>
+</application>

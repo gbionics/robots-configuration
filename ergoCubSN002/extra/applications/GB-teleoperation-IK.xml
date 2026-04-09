@@ -1,0 +1,24 @@
+<application>
+    <name>GB-teleoperation-IK</name>
+    <module>
+        <name>yarprobotinterface</name>
+        <parameters>--config RobotStateProvider_ergoCub_openxr_ifeel.xml --xy_scale 0.7 --z_scale 0.7</parameters>
+        <environment>YARP_FORWARD_LOG_ENABLE=0</environment>
+        <description>Run IK HDE Device</description>
+        <node>teleop</node>
+        <tag>RobotStateProvider</tag>
+    </module>
+
+    <module>
+        <name>HumanStateVisualizer</name>
+        <parameters>--from HumanStateVisualizer_ergoCub_openxr_ifeel.ini</parameters>
+        <environment>YARP_FORWARD_LOG_ENABLE=0</environment>
+        <description>Run IK HDE Device</description>
+        <node>teleop</node>
+        <tag>RobotStateProvider</tag>
+        <dependencies>
+            <port timeout="15.0">/ergoCub/RobotStateServer/state:o</port>
+            <port timeout="15.0">/HDE/WearableTargetsServer/state:o</port>
+        </dependencies>
+    </module>
+</application>

@@ -1,0 +1,28 @@
+<application>
+    <name>GB-teleoperation-luxonis</name>
+
+    <module>
+        <workdir>/usr/local/src/robot/ami/team-phoenix/luxonis/</workdir>
+        <name>bash</name>
+        <parameters>run_luxonis.sh config_teleop-teleop.toml</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>yarpdev</name>
+        <parameters>--from openXRHeadsetParameters.ini --mono_eye false --split_eye_ports true</parameters>
+        <node>teleop</node>
+    </module>
+
+    <connection>
+        <from>/luxonis/image/right_eye/cam_a/rgbImage:o</from>
+        <to>/headset/display/right:i</to>
+        <protocol>mjpeg</protocol>
+    </connection>
+
+    <connection>
+        <from>/luxonis/image/left_eye/cam_d_2/rgbImage:o</from>
+        <to>/headset/display/left:i</to>
+        <protocol>mjpeg</protocol>
+    </connection>
+</application>
