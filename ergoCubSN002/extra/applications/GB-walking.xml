@@ -3,7 +3,7 @@
     <module>
         <workdir>/usr/local/src/robot/robotology-superbuild/src/walking-controllers/src/WalkingModule/app/robots/ergoCubSN002</workdir>
         <name>WalkingModule</name>
-        <parameters>--from dcm_walking_autonomous.ini --RETARGETING::data_arrived_timeout 1000</parameters>
+        <parameters>--from dcm_walking_autonomous.ini --RETARGETING::data_arrived_timeout 15</parameters>
         <node>ergocub-torso</node>
     </module>
 

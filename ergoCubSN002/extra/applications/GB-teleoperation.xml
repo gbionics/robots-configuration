@@ -3,7 +3,7 @@
 
     <module>
         <name>yarprobotinterface</name>
-        <parameters>--config iFeelSuit.xml --node-list "(1 2 4 5 6 7 8)" --serial-port-name COM4</parameters>
+        <parameters>--config iFeelSuit.xml --node-list "(4 5 6 7 8)" --serial-port-name COM4</parameters>
         <environment>YARP_FORWARD_LOG_ENABLE=1</environment>
         <description>Run iFeelSuit driver</description>
         <node>teleop</node>

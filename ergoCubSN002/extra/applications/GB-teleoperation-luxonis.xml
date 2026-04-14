@@ -2,7 +2,7 @@
     <name>GB-teleoperation-luxonis</name>
 
     <module>
-        <workdir>/usr/local/src/robot/ami/team-phoenix/luxonis/</workdir>
+        <workdir>/usr/local/src/robot/ami/gb-lerobot/scripts/cameras/</workdir>
         <name>bash</name>
         <parameters>run_luxonis.sh config-teleop.toml</parameters>
         <node>localhost</node>

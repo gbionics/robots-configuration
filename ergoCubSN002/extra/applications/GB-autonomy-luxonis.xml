@@ -1,7 +1,7 @@
 <application>
     <name>GB-autonomy-luxonis</name>
     <module>
-        <workdir>/usr/local/src/robot/ami/team-phoenix/luxonis/</workdir>
+        <workdir>/usr/local/src/robot/ami/gb-lerobot/scripts/cameras/</workdir>
         <name>bash</name>
         <parameters>run_luxonis.sh config-autonomy.toml</parameters>
         <node>localhost</node>
