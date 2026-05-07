@@ -15,13 +15,13 @@
     </module>
 
     <connection>
-        <from>/luxonis/image/right_eye/cam_a/rgbImage:o</from>
+        <from>/luxonis/image/right_eye/rgbImage:o</from>
         <to>/headset/display/right:i</to>
         <protocol>mjpeg</protocol>
     </connection>
 
     <connection>
-        <from>/luxonis/image/left_eye/cam_d_2/rgbImage:o</from>
+        <from>/luxonis/image/left_eye/rgbImage:o</from>
         <to>/headset/display/left:i</to>
         <protocol>mjpeg</protocol>
     </connection>
