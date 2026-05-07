@@ -4,7 +4,7 @@
     <module>
         <workdir>/usr/local/src/robot/ami/gb-lerobot/scripts/cameras/</workdir>
         <name>bash</name>
-        <parameters>run_luxonis.sh config-teleop.toml --view</parameters>
+        <parameters>run_luxonis.sh config-teleop.toml --view --view-timeout=30</parameters>
         <node>localhost</node>
     </module>
 
